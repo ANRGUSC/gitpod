@@ -25,17 +25,32 @@ First, we can extend the default gitpod workspace and install our project-specif
 ```Dockerfile
 FROM gitpod/workspace-full
 
+# Install graphviz system-level dependency
 RUN sudo apt-get update && sudo apt-get install -y graphviz-dev
-RUN pyenv install 3.6.15 && pyenv global 3.6.15
+
+# Install python 3.9.6 and enable it as the default
+RUN pyenv install 3.9.6 && pyenv global 3.9.6
 ```
 
 Then, we can specify some startup tasks to execute once the image is built:
 ```yml
 # gitpod.yml
+
+# Use our customized Dockerfile instead of the default gitpod workspace
 image:
   file: .gitpod.Dockerfile
+  
+# Startup tasks 
+# "init" tasks get executed for every commit to the repo - good for dependency installation-type tasks
 tasks:
   - init: pip install matplotlib pandas networkx
+  
+# We can add VSCode extensions to be installed and enabled in our environment
+# This is a python project, so we probably want the python extension installed
+# You can also install packages like normal in VSCode
+vscode:
+  extensions:
+    - ms-python.python
 ```
 
 
