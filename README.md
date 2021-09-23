@@ -19,7 +19,7 @@ Any GitHub, BitBucket, or GitLab repository can be opened in Gitpod by simply pr
 For example, you can open this repository in github by going to [https://gitpod.io/#https://github.com/ANRGUSC/gitpod](https://gitpod.io/#https://github.com/ANRGUSC/gitpod).
 
 This opens the container in Gitpod's default workspace, a linux container with the most common tools and software (git, python, node, etc.) pre-installed.
-The real power of Gitpod, though, is that it allows you to customize your dev environment so that all required dependencies, packages, configurations, etc. are preinstalled (with the correct versions) and ready-to-go.
+The real power of Gitpod, though, is that it allows you to customize your dev environment so that all required dependencies, packages, and configurations are preinstalled (with the correct versions) and ready-to-go.
 
 For example, suppose we're working on a python project that requires python 3.9 or higher and has a few python package dependencies, say matplotlib, pandas, and networkx. 
 The python package networkx's drawing function also requires graphviz-dev, a system-level dependency, to be installed. 
@@ -77,7 +77,7 @@ Collection of tips & tricks for making the most out of Gitpod
 ### Prebuilds
 By enabling prebuilds, Gitpod automatically builds your dev environments whenever you push a commit to the repo.
 This dramatically reduces the time to open your project in Gitpod when you're ready to develop. 
-Enable prebuilds in just a few easy steps by following [this quick guide](https://www.gitpod.io/docs/prebuilds).
+Enable prebuilds in just a few easy steps by following [this guide](https://www.gitpod.io/docs/prebuilds).
 
 
 ### What about projects with GUIs?
