@@ -6,6 +6,7 @@
 - [Getting Started](#getting-started)
 - [Tips & Tricks](#tips--tricks)
   - [Prebuilds](#prebuilds)
+  - [What about projects with GUIs?](#what-about-projects-with-guis)
 <!-- /TOC -->
 
 
@@ -77,3 +78,22 @@ By enabling prebuilds, GitPod automatically builds your dev environments wheneve
 This dramatically reduces the time to open your project in GitPod when you're ready to develop. 
 Enable prebuilds in just a few easy steps by following [this quick guide](https://www.gitpod.io/docs/prebuilds).
 
+
+### What about projects with GUIs?
+If your GUI is browser-based then there's nothing more to do! 
+Any port that's exposed on the system can be viewed in-IDE or in your browser in another window or tab.
+All you need to do is go to the *Remote Explorer* tab on the left-hand side of your IDE. 
+Then just click the *open in browser* or *open in preview* buttons next to the exposed port you want to view.
+
+If your GUI is not browser-based, you're still not out of luck.
+GitPod offers an x11-vnc variant of their default workspace image which opens a virtual desktop in a browser tab for displaying all GUI components.
+It's not perfect (it doesn't work with matplotlib yet, but their working on it) but it should support most GUI applications.
+All you need to do is modify the your ```.gitpod.Dockerfile``` file to be based on the ```gitpod/workspace-full-vnc``` rather than ```gitpod/workspace-full```.
+
+```Dockerfile
+# .gitpod.Dockerfile
+
+FROM gitpod/workspace-full-vnc
+
+...
+```
