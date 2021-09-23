@@ -7,6 +7,7 @@
 - [Tips & Tricks](#tips--tricks)
   - [Prebuilds](#prebuilds)
   - [What about projects with GUIs?](#what-about-projects-with-guis)
+  - [Add an "Open in GitPod" Button to your README](#add-an-open-in-gitpod-button-to-your-readme)
 <!-- /TOC -->
 
 
@@ -96,4 +97,14 @@ All you need to do is modify the your ```.gitpod.Dockerfile``` file to be based 
 FROM gitpod/workspace-full-vnc
 
 ...
+```
+
+### Add an "Open in GitPod" Button to your README
+To add a button like this:
+
+[![Open In GitPod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/ANRGUSC/gitpod)
+
+to your readme, just add the following to your README.md:
+```md
+[![Open In GitPod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#<your repo here>)
 ```
