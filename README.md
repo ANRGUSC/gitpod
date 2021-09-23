@@ -13,6 +13,7 @@
 
 ## Other Documentation/Articles/Tutorials
 - [Gitpod Documentation](https://www.gitpod.io/docs/): very comprehensive and easy-to-read documentation on how to customize your gitpod environments
+- [Gitpodifying](https://www.gitpod.io/blog/gitpodify/): tutorial on making your github repo compatible with gitpod
 
 ## Getting Started 
 Any GitHub, BitBucket, or GitLab repository can be opened in Gitpod by simply prefixing the repository's url with ```https://gitpod.io/#```.
