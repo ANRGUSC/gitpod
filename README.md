@@ -1,5 +1,14 @@
 # Integrating your repo with GitPod
 
+**Table of Contents**
+<!-- TOC -->
+- [Other Documentation/Articles/Tutorials](#other-documentationarticlestutorials)
+- [Getting Started](#getting-started)
+- [Tips & Tricks](#tips--tricks)
+  - [Prebuilds](#prebuilds)
+<!-- /TOC -->
+
+
 ## Other Documentation/Articles/Tutorials
 - [GitPod Documentation](https://www.gitpod.io/docs/): very comprehensive and easy-to-read documentation on how to customize your gitpod environments
 
