@@ -1,5 +1,9 @@
 # Integrating your repo with GitPod
 
+## Other Documentation/Articles/Tutorials
+- [GitPod Documentation](https://www.gitpod.io/docs/): very comprehensive and easy-to-read documentation on how to customize your gitpod environments
+
+## Getting Started 
 Any GitHub, BitBucket, or GitLab repository can be opened in GitPod by simply prefixing the repository's url with ```https://gitpod.io/#```.
 For example, you can open this repository in github by going to [https://gitpod.io/#https://github.com/ANRGUSC/gitpod](https://gitpod.io/#https://github.com/ANRGUSC/gitpod).
 
@@ -21,8 +25,10 @@ This completely encapsulates our environment in a Docker container, avoiding tra
 
 For our example, we could write our ```.gitpod.yml``` and ```.gitpod.Dockerfile``` as follows.
 
-First, we can extend the default gitpod workspace and install our project-specific dependencies:
+First, we can extend the default gitpod workspace and install our project-specific dependencies in the ```.gitpod.Dockerfile```:
 ```Dockerfile
+# .gitpod.Dockerfile
+
 FROM gitpod/workspace-full
 
 # Install graphviz system-level dependency
@@ -32,7 +38,7 @@ RUN sudo apt-get update && sudo apt-get install -y graphviz-dev
 RUN pyenv install 3.9.6 && pyenv global 3.9.6
 ```
 
-Then, we can specify some startup tasks to execute once the image is built:
+Then, we can specify startup tasks, VSCode extensions, ports, etc. in the ```.gitpod.yml``` file:
 ```yml
 # gitpod.yml
 
@@ -54,5 +60,11 @@ vscode:
 ```
 
 
+## Tips & Tricks
+Collection of tips & tricks for making the most out of GitPod
 
+### Prebuilds
+By enabling prebuilds, GitPod automatically builds your dev environments whenever you push a commit to the repo.
+This dramatically reduces the time to open your project in GitPod when you're ready to develop. 
+Enable prebuilds in just a few easy steps by following [this quick guide](https://www.gitpod.io/docs/prebuilds).
 
